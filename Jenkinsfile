@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker-agent-python'
+            label 'docker-python'
             }
       }
     triggers {
@@ -36,4 +36,5 @@ pipeline {
             }
         }
     }
+
 }
