@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Testing..updated
+                echo "Testing..updated"
                 sh '''
                 cd myapp
                 python3 hello.py
@@ -38,6 +38,7 @@ pipeline {
     }
 
 }
+
 
 
 
