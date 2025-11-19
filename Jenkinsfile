@@ -10,16 +10,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building.. updated"
+                echo "Building"
                 sh '''
-
+                cd myapp
+                pip install -r requirements.txt
                 '''
             }
         }
         stage('Test') {
             steps {
-                echo "Testing..updated"
+                echo "Testing..updated
                 sh '''
+                cd myapp
+                python3 hello.py
+                python2 hello.py --name=Adrian
                 '''
             }
         }
@@ -28,13 +32,13 @@ pipeline {
                 echo 'Deliver....'
                 sh '''
                 echo "doing delivery stuff..update"
-                python3 python.py
                 '''
             }
         }
     }
 
 }
+
 
 
 
